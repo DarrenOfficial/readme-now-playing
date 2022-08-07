@@ -1,40 +1,72 @@
-# Spotify Github - Now Playing
+# Spotify x Github - Readme Cards
 
 Cool looking cards for your github readme which showing your currently playing song on spotify.
 
-## How to use:
-1. Login with your spotify account by visting [this link](https://readme-now-playing.vercel.app/)
-2. Copy your user ID.
-3. Add this URL to your readme file https://readme-now-playing.vercel.app/now-playing/q?uid=YOUR_USER_ID
-4. (OPTIONAL) For more custom styling, refer to the parameters below.
+## How to use
+
+* Login with your spotify account by visting [this link](https://readme-now-playing.vercel.app/)
+* Copy the user ID displayed after logging in.
+* Add this URL to your readme file `![](https://readme-now-playing.vercel.app/now-playing/q?uid=YOUR_USER_ID)` \
+  and paste your user ID from the last step instead of `YOUR USER ID`.
+* [OPTIONAL] For more custom styling, refer to the parameters below.
 
 ## URL Parameters
-| Parameters | Description                           | Options                                                              |
-|:----------:|---------------------------------------|----------------------------------------------------------------------|
-|    size    | Size of the cards to be displayed.    | small, med, large                                                    |
-|    theme   | Color theme of the card displayed.    | light, dark, colorblock (Auto fetch colors from the music cover art) |
-|     bar    | Type of progress indicator displayed. | waves (random waves)                                                 |
+
+| Parameters | Description                           | Options                                                               |
+|:----------:|---------------------------------------|-----------------------------------------------------------------------|
+|    size    | Size of the cards to be displayed.    | `small`, `med` (default), `large`                                               |
+|    theme   | Color theme of the card displayed.    | `light`, `dark` (default), `colorblock` (extract colors from the song cover art)|
+|     bar    | Type of progress indicator displayed. | `progress-bar` (default), `waves`                                                |
+|  bg-color  | custom **background** color for the card (is ignored if a theme is also specified) | CSS compatible hex string in the format `#RRGGBB` or `#RRGGBBAA` |
+| text-color | custom **text** color for the card (also ignored if a theme is specified too) | CSS compatible hex string in the format `#RRGGBB` or `#RRGGBBAA` |
 
 ## Demos
 
-### Waves
+The cards come in various sizes and styles, which can also be customized by passing the above parameters to the URL. You can mix and matcch many options to your liking and there's more of them coming soon. Here's some examples.
 
-|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=colorblock&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=light&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=colorblock&bar=waves)|
-|---|---|---|
-|Size: `large`<br />Theme: `colorblock`<br />Bar: Waves|Size: `med`<br />Theme: `light`<br />Bar: Waves|Size: `large`<br />Theme: `colorblock`<br />Bar: Waves|
+<!-- ### Waves -->
 
+|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=colorblock&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=light&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=dark&bar=waves)|
+|:---:|:---:|:---:|
+|size: `large`<br />theme: `colorblock`<br />bar: `waves`|size: `med`<br />theme: `light`<br />bar: `waves`|size: `small`<br />theme: `dark`<br />bar: `waves`|
+|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=light&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=dark&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=colorblock)|
+|size: `large`<br />theme: `light`<br />bar: `progress-bar`|size: `med`<br />theme: `dark`<br />bar: `progress-bar`|size: `small`<br />theme: `colorblock`<br />bar: `progress-bar`|
 
-### Progress Indicator
-|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=dark)|
-|---|
-|Size: `small`<br />Theme: `dark`|
+<!-- ### Progress Indicator -->
 
+<!-- |:---:| -->
 
 ## Roadmap
 
-1. Landscape Cards
+<details>
+  <summary><b>Landscape cards</b></summary>
+  
+  The portrait oriented cards tend to occupy a lot of vertical space, so having one of them at the end or in the middle of your profile readme would look kinda wierd.
+  so besides not having to left/right align the cards against some other content for space, horizontal cards make much more sense in terms of using the space better.
+  This is an example SVG implementation of such layout, will implement the daynamic data fetching soon and then this can be used.
+  ![spotify-github-profile](docs/card_landscape_large.svg)
+</details>
 
-![spotify-github-profile](docs/card_landscape_large.svg)
+<details>
+  <summary><b>Top tracks / artists card</b></summary>
+  
+  an separate endpoint (`/top`) for cards showing a list of a user's top artist (at `/top/artsits`) or top tracks (`/top/tracks`).
+
+  will create a design on figma and an svg implementation of it before setting up dynamic data and the corresponding endpoints.
+</details>
+
+<details>
+  <summary><b>more themes</b></summary>
+  
+  more themes for card backgrounds ebsides the ones available now (dark, light and colorblock)
+
+* gradient
+    extracts teh dominant colors from the album cover art, but instead of a flat color fill, the background will have a gradient fill, between the extracted color and black (as the `gradient-dark` theme) or between the extracted color and white (as `gradient-light`)
+* blurred covert art background
+    having the blurred version of the cover art as the card background. Again, could have a black or white tints on top of the blur (for text legibility) and call them `blur-dark` or `blur-light` themes.
+
+</details>
+
 <!-- ![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&background=dark&test=true) -->
 <!-- ![spotify-github-profile](https://now-playing.15adityagaikwad.repl.co/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&background=dark) -->
 
@@ -42,4 +74,5 @@ Cool looking cards for your github readme which showing your currently playing s
 <!-- ![testing svg rendering in github markdown](docs/card_small.svg) -->
 
 ## Contribution
+
 I'll be very happy to have contributions to this project!
