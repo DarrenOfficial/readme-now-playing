@@ -32,7 +32,7 @@ The cards come in various sizes and styles, which can also be customized by pass
 
 <!-- ### Progress Indicator -->
 
-|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=light&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=dark&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=colorblock)|
+|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=light)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=dark)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=colorblock)|
 |:---:|:---:|:---:|
 |size: `large`<br />theme: `light`<br />bar: `progress-bar`|size: `med`<br />theme: `dark`<br />bar: `progress-bar`|size: `small`<br />theme: `colorblock`<br />bar: `progress-bar`|
 
