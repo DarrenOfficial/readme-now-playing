@@ -29,12 +29,12 @@ The cards come in various sizes and styles, which can also be customized by pass
 |![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=colorblock&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=light&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=dark&bar=waves)|
 |:---:|:---:|:---:|
 |size: `large`<br />theme: `colorblock`<br />bar: `waves`|size: `med`<br />theme: `light`<br />bar: `waves`|size: `small`<br />theme: `dark`<br />bar: `waves`|
-|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=light&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=dark&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=colorblock)|
-|size: `large`<br />theme: `light`<br />bar: `progress-bar`|size: `med`<br />theme: `dark`<br />bar: `progress-bar`|size: `small`<br />theme: `colorblock`<br />bar: `progress-bar`|
 
 <!-- ### Progress Indicator -->
 
-<!-- |:---:| -->
+|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=large&theme=light&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=med&theme=dark&bar=waves)|![spotify-github-profile](https://readme-now-playing.vercel.app/now-playing/q?uid=bwygdf3k5na8cdy8ek3ofoteq&size=small&theme=colorblock)|
+|:---:|:---:|:---:|
+|size: `large`<br />theme: `light`<br />bar: `progress-bar`|size: `med`<br />theme: `dark`<br />bar: `progress-bar`|size: `small`<br />theme: `colorblock`<br />bar: `progress-bar`|
 
 ## Roadmap
 
@@ -75,4 +75,4 @@ The cards come in various sizes and styles, which can also be customized by pass
 
 ## Contribution
 
-I'll be very happy to have contributions to this project!
+Any and every contribution is welcomed and appreciated.
