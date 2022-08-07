@@ -12,13 +12,13 @@ Cool looking cards for your github readme which showing your currently playing s
 
 ## URL Parameters
 
-| Parameters | Description                           | Options                                                               |
-|:----------:|---------------------------------------|-----------------------------------------------------------------------|
-|    size    | Size of the cards to be displayed.    | `small`, `med` (default), `large`                                               |
-|    theme   | Color theme of the card displayed.    | `light`, `dark` (default), `colorblock` (extract colors from the song cover art)|
-|     bar    | Type of progress indicator displayed. | `progress-bar` (default), `waves`                                                |
-|  bg-color  | custom **background** color for the card (is ignored if a theme is also specified) | CSS compatible hex string in the format `#RRGGBB` or `#RRGGBBAA` |
-| text-color | custom **text** color for the card (also ignored if a theme is specified too) | CSS compatible hex string in the format `#RRGGBB` or `#RRGGBBAA` |
+| Parameters | Description                                                                        | Options                                                                          |
+|:----------:|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+|    size    | Size of the cards to be displayed.                                                 | `small`, `med` (default), `large`                                                |
+|    theme   | Color theme of the card displayed.                                                 | `light`, `dark` (default), `colorblock` (extract colors from the song cover art) |
+|     bar    | Type of progress indicator displayed.                                              | `progress-bar` (default), `waves`                                                |
+|  bg-color  | custom **background** color for the card (is ignored if a theme is also specified) | CSS compatible hex string in the format `#RRGGBB` or `#RRGGBBAA`                 |
+| text-color | custom **text** color for the card (also ignored if a theme is specified too)      | CSS compatible hex string in the format `#RRGGBB` or `#RRGGBBAA`                 |
 
 ## Demos
 
@@ -44,6 +44,7 @@ The cards come in various sizes and styles, which can also be customized by pass
   The portrait oriented cards tend to occupy a lot of vertical space, so having one of them at the end or in the middle of your profile readme would look kinda wierd.
   so besides not having to left/right align the cards against some other content for space, horizontal cards make much more sense in terms of using the space better.
   This is an example SVG implementation of such layout, will implement the daynamic data fetching soon and then this can be used.
+  <br />
   ![spotify-github-profile](docs/card_landscape_large.svg)
 </details>
 
@@ -58,11 +59,13 @@ The cards come in various sizes and styles, which can also be customized by pass
 <details>
   <summary><b>more themes</b></summary>
   
-  more themes for card backgrounds ebsides the ones available now (dark, light and colorblock)
+  more themes for card backgrounds besides the ones available now (dark, light and colorblock)
 
-* gradient
-    extracts teh dominant colors from the album cover art, but instead of a flat color fill, the background will have a gradient fill, between the extracted color and black (as the `gradient-dark` theme) or between the extracted color and white (as `gradient-light`)
-* blurred covert art background
+* **gradient**
+
+    extracts the dominant colors from the album cover art, but instead of a flat color fill, the background will have a gradient fill, between the extracted color and black (as the `gradient-dark` theme) or between the extracted color and white (as `gradient-light`)
+* **blurred covert art background**
+
     having the blurred version of the cover art as the card background. Again, could have a black or white tints on top of the blur (for text legibility) and call them `blur-dark` or `blur-light` themes.
 
 </details>
